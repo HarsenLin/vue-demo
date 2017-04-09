@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>主机监控系统</title>
+</head>
+<body>
+<div id="app" style="height: 100%;">
+    <my-header :data="header"></my-header>
+    <router-link v-for="item in routers" v-bind:to="item.path">{{item.name}}</router-link>
+    <router-view class="view" :header="header" :footer="footer"></router-view>
+    <my-footer :data="footer"></my-footer>
+</div>
+<script src="dist/build.js"></script>
+
+</body>
+</html>
